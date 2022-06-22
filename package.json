@@ -1,0 +1,30 @@
+{
+	"name": "shobokshy.github.io",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@cayro/ui-core": "^1.0.0-alpha.4",
+		"next": "12.1.6",
+		"next-transpile-modules": "^9.0.0",
+		"ogl": "^0.0.93",
+		"react": "18.1.0",
+		"react-dom": "18.1.0",
+		"react-ogl": "^0.5.1"
+	},
+	"devDependencies": {
+		"@types/node": "17.0.41",
+		"@types/react": "18.0.12",
+		"@types/react-dom": "18.0.5",
+		"eslint": "8.17.0",
+		"eslint-config-next": "12.1.6",
+		"glslify-loader": "^2.0.0",
+		"raw-loader": "^4.0.2",
+		"typescript": "4.7.3"
+	}
+}
