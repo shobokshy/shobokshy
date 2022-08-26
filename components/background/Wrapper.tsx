@@ -8,16 +8,14 @@ const Wrapper: FC<WrapperProps> = (props) => {
 	return (
 		<Canvas
 			camera={{ position: [0, 0, 8] }}
-			// renderer={(element) =>
-			// 	new Renderer({
-			// 		canvas: element,
-			// 		alpha: true,
-			// 		dpr: 0.2 * window.devicePixelRatio,
-			// 		premultipliedAlpha: false,
-			// 		depth: false,
-			// 	}) as any
-			// }
-		>
+			renderer={{
+				alpha: true,
+				antialias: true,
+				powerPreference: "low-power",
+				dpr: 0.2 * window.devicePixelRatio,
+				premultipliedAlpha: false,
+				depth: false,
+			}}>
 			<Gradient />
 		</Canvas>
 	);

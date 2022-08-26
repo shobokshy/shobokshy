@@ -14,6 +14,8 @@ const globalStyles = globalCss({
 	},
 });
 
+const darkThemeClassName = defaultStyle.darkScheme.theme.className;
+
 export default function Document() {
 	globalStyles();
 	return (
@@ -25,7 +27,7 @@ export default function Document() {
 
 				<style id="cayro-ui" dangerouslySetInnerHTML={{ __html: getCssText() }} />
 			</Head>
-			<body className={defaultStyle.darkScheme.theme.className}>
+			<body className={darkThemeClassName}>
 				<Main />
 				<NextScript />
 			</body>
