@@ -1,13 +1,10 @@
 import { Heading, Stack } from "@cayro/ui-core";
 import { FC } from "react";
-import { NowPlaying } from "../api/spotify";
 import { Content } from "./Content";
 import { Item } from "./Item";
 import { Wrapper } from "./Wrapper";
 
-interface MusicProps {
-	nowPlaying?: NowPlaying;
-}
+interface MusicProps {}
 
 export const Music: FC<MusicProps> = (props) => {
 	return (

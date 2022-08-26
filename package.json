@@ -10,7 +10,7 @@
 	},
 	"dependencies": {
 		"@cayro/ui-core": "^1.0.0-alpha.4",
-		"next": "12.1.6",
+		"next": "^12.2.5",
 		"next-transpile-modules": "^9.0.0",
 		"ogl": "^0.0.93",
 		"react": "18.1.0",
