@@ -3,7 +3,6 @@ import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 import { Header, Music, Page } from "../components";
 import { Intro } from "../components/Intro";
-import { NowListening } from "../components/NowListening";
 import { Projects } from "../components/Projects";
 
 const Background = dynamic(() => import("../components/background/Wrapper"), { ssr: false });
@@ -18,7 +17,6 @@ const Home: NextPage<HomeProps> = () => {
 				<Intro />
 				<Projects />
 				<Music />
-				<NowListening />
 			</Stack>
 			<Box
 				css={{

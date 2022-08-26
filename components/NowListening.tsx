@@ -2,8 +2,6 @@ import { Box, Flex, Stack, Text } from "@cayro/ui-core";
 import { keyframes } from "@stitches/react";
 import { FC, Fragment, useEffect, useState } from "react";
 import { NowPlaying } from "../types";
-import { Content } from "./Content";
-import { Wrapper } from "./Wrapper";
 
 interface NowListeningProps {}
 
@@ -42,51 +40,47 @@ export const NowListening: FC<NowListeningProps> = () => {
 	);
 
 	return (
-		<Wrapper>
-			<Content>
-				<Stack gap="small" direction="column" css={{ width: "fit-content" }}>
-					{isLoading ? (
-						<Text css={{ fontWeight: "lighter", padding: 0, fontSize: "$2" }}>Looking through library...</Text>
+		<Stack gap="small" direction="column" css={{ width: "fit-content" }}>
+			{isLoading ? (
+				<Text css={{ fontWeight: "lighter", padding: 0, fontSize: "$2" }}>Looking through library...</Text>
+			) : (
+				<Fragment>
+					{state?.isPlaying ? (
+						<Stack gap="small" verticalAlign="center">
+							{playing}
+							<Text css={{ fontWeight: "lighter", padding: 0, fontSize: "$2" }}>Now listening</Text>
+						</Stack>
 					) : (
-						<Fragment>
-							{state?.isPlaying ? (
-								<Stack gap="small" verticalAlign="center">
-									{playing}
-									<Text css={{ fontWeight: "lighter", padding: 0, fontSize: "$2" }}>Now listening</Text>
-								</Stack>
-							) : (
-								<Text css={{ fontWeight: "lighter", padding: 0, fontSize: "$2" }}>Offline. Last played</Text>
-							)}
-						</Fragment>
+						<Text css={{ fontWeight: "lighter", padding: 0, fontSize: "$2" }}>Offline. Last played</Text>
 					)}
+				</Fragment>
+			)}
 
-					<Fragment>
-						<Box
-							as="a"
-							href={state?.track.externalUrl}
-							target="_blank"
-							css={{
-								padding: 0,
-								fontSize: "$3",
-								fontWeight: "bold",
-								textDecoration: "none",
-								color: "$text",
-								transition: "color 0.2s ease-in-out",
-								"&:hover": {
-									color: "#EEBA64",
-								},
-								"&:focus-visible": {
-									outline: "none",
-									border: "2px solid #EEBA64",
-								},
-							}}>
-							{state?.track.name}
-						</Box>
-						<Text>{state?.track.artists.map((a) => a.name).join(", ")}</Text>
-					</Fragment>
-				</Stack>
-			</Content>
-		</Wrapper>
+			<Fragment>
+				<Box
+					as="a"
+					href={state?.track.externalUrl}
+					target="_blank"
+					css={{
+						padding: 0,
+						fontSize: "$3",
+						fontWeight: "bold",
+						textDecoration: "none",
+						color: "$text",
+						transition: "color 0.2s ease-in-out",
+						"&:hover": {
+							color: "#EEBA64",
+						},
+						"&:focus-visible": {
+							outline: "none",
+							border: "2px solid #EEBA64",
+						},
+					}}>
+					{state?.track.name}
+				</Box>
+				<Text>{state?.track.artists.map((a) => a.name).join(", ")}</Text>
+			</Fragment>
+		</Stack>
 	);
 };
 
