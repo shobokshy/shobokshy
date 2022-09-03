@@ -2,8 +2,8 @@ const withTM = require("next-transpile-modules")(["@cayro/ui-core", "@cayro/ui-p
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'unsafe-eval';
-  style-src 'unsafe-inline';
+  script-src 'self' 'unsafe-eval';
+  style-src 'self' 'unsafe-inline';
   font-src 'self';
   img-src 'self';
   connect-src 'self';
