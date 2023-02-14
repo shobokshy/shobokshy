@@ -1,12 +1,13 @@
-import { Box, Flex } from "@cayro/ui-core";
+import { Box } from "@cayro/ui-core";
 import { FC } from "react";
 
 interface SunProps {}
 
 export const Sun: FC<SunProps> = () => {
 	return (
-		<Flex
-			css={{
+		<Box
+			style={{
+				display: "flex",
 				flexDirection: "column",
 				justifyContent: "center",
 				aspectRatio: "1/1",
@@ -19,13 +20,13 @@ export const Sun: FC<SunProps> = () => {
 				.map((_, i) => (
 					<Box
 						key={i}
-						css={{
+						style={{
 							width: "100%",
 							height: 2,
-							backgroundColor: "#EEBA64",
+							backgroundColor: "#000",
 						}}
 					/>
 				))}
-		</Flex>
+		</Box>
 	);
 };

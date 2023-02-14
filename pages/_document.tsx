@@ -1,32 +1,18 @@
-import { defaultStyle, getCssText, globalCss } from "@cayro/ui-primitives";
+import { ThemeProvider } from "@cayro/ui-primitives";
 import { Head, Html, Main, NextScript } from "next/document";
-
-const globalStyles = globalCss({
-	"*": { margin: 0, padding: 0 },
-	html: {
-		scrollBehavior: "smooth",
-	},
-	body: {
-		fontSize: "100%",
-		fontFamily: "$body",
-		color: "$text",
-		backgroundColor: "$background",
-	},
-});
-
-const darkThemeClassName = defaultStyle.darkScheme.theme.className;
+import { fontStyle } from "../components/styles/fonts.css";
 
 export default function Document() {
-	globalStyles();
 	return (
 		<Html lang="en">
 			<Head>
 				<meta name="theme-color" content="#000" />
-				<style id="cayro-ui" dangerouslySetInnerHTML={{ __html: getCssText() }} />
 			</Head>
-			<body className={darkThemeClassName}>
-				<Main />
-				<NextScript />
+			<body>
+				<ThemeProvider fontStyle={fontStyle}>
+					<Main />
+					<NextScript />
+				</ThemeProvider>
 			</body>
 		</Html>
 	);

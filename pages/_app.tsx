@@ -1,7 +1,4 @@
-//@ts-nocheck
-import { SSRProvider, ThemeProvider } from "@cayro/ui-core";
-import { ColorScheme } from "@cayro/ui-primitives";
-import "@cayro/ui-primitives/dist/fonts/fonts.css";
+import { SSRProvider } from "@cayro/ui-core";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Fragment } from "react";
@@ -13,9 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<title>shobokshy</title>
 			</Head>
 			<SSRProvider>
-				<ThemeProvider preferdColorScheme={ColorScheme.Dark as any}>
-					<Component {...pageProps} />
-				</ThemeProvider>
+				<Component {...pageProps} />
 			</SSRProvider>
 		</Fragment>
 	);
