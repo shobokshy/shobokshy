@@ -1,8 +1,9 @@
-import { FC } from "react";
+import { FC, RefObject } from "react";
 import { Canvas } from "react-ogl";
 import { Gradient } from "./Gradient";
 
-interface WrapperProps {}
+interface WrapperProps {
+}
 
 const Wrapper: FC<WrapperProps> = (props) => {
 	return (
@@ -16,7 +17,7 @@ const Wrapper: FC<WrapperProps> = (props) => {
 				premultipliedAlpha: false,
 				depth: false,
 			}}>
-			<Gradient />
+			 <Gradient />
 		</Canvas>
 	);
 };
