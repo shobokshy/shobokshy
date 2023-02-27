@@ -1,7 +1,6 @@
 import { Box, Stack } from "@cayro/ui-core";
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
-import { useRef } from "react";
 import { Header, Music, Page } from "../components";
 import { Intro } from "../components/Intro";
 import { Projects } from "../components/Projects";

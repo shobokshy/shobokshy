@@ -8,14 +8,13 @@ globalStyle("html, body", {
 export const contentWrapper = style({
     display: "flex",
     flexDirection: "column",
-    backgroundColor: "#fff",
     margin: vars.space[3],
     "@media": {
         [breakpoints.mobile]: {
             margin: vars.space[1],
-        }
+        },
     },
-    zIndex: 1
+    zIndex: 1,
 });
 
 export const backgroundWrapper = style({
@@ -28,6 +27,9 @@ export const backgroundWrapper = style({
 export const pageWrapper = style({
     vars: {
         //#EEBA64"
-        [vars.colors.primary]: "#FD3F76"
+        [vars.colors.primary]: "#FD3F76",
     },
-})
+    "::selection": {
+        background: vars.colors.primary,
+    },
+});

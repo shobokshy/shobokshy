@@ -17,7 +17,7 @@ export const item = style({
             opacity: 1,
             transform: "scale(1)",
             border: "2px solid",
-            borderColor: vars.colors.primary
+            borderColor: vars.colors.primary,
         },
     },
     "::before": {
@@ -36,5 +36,9 @@ export const item = style({
 
 export const date = style({
     fontWeight: "lighter",
-    fontSize: vars.fontSizes[2]
+    fontSize: vars.fontSizes[2],
+});
+
+export const heading = style({
+    fontWeight: "bold",
 });
