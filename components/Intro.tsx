@@ -16,11 +16,11 @@ export const Intro: FC<IntroProps> = (props) => {
         <Wrapper>
             <Content>
                 <Text color="text" className={subHeading}>
-                    Hey I'm
+                    Hey I&apos;m
                 </Text>
                 <Heading className={[heading, heroFont.className]}>Ahmed,</Heading>
                 <Text color="text">
-                    I'm a full-stack developer living in Brisbane, Australia <HomeIcon />. I'm interested in user & developer experience and building polished software{" "}
+                    I&apos;m a full-stack developer living in Brisbane, Australia <HomeIcon />. I&apos;m interested in user & developer experience and building polished software{" "}
                     <PaintbrushIcon />. Making people feel empowered and productive <RocketIcon /> yet joyful <SmileIcon /> is what energises and wakes me up everyday.
                 </Text>
             </Content>

@@ -14,6 +14,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <Fragment>
             <Head>
+                <title>shobokshy</title>
+                <meta name="theme-color" content="#000" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></meta>
             </Head>
             <ThemeProvider fontStyle={mainFont.className} theme={darkTheme}>
