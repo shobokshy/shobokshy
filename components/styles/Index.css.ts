@@ -1,7 +1,15 @@
 import { breakpoints, style, vars } from "@cayro/ui-style";
 import { globalStyle } from "@vanilla-extract/css";
 
+globalStyle("*", {
+    margin: 0,
+    minWidth: 0,
+    boxSizing: "border-box",
+});
+
 globalStyle("html, body", {
+    padding: 0,
+    margin: 0,
     backgroundColor: "#000",
 });
 
