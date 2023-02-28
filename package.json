@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@cayro/ui-core": "^1.0.0-alpha.54",
+        "@cayro/ui-primitives": "^1.0.0-alpha.49",
         "@next/font": "^13.1.1",
         "next": "^13.1.1",
         "ogl": "^0.0.102",
