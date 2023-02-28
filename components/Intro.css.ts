@@ -5,7 +5,7 @@ export const heading = style({
     "@media": {
         [breakpoints.mobile]: {
             fontSize: 94,
-        }
+        },
     },
     lineHeight: 1,
     marginTop: -32,
@@ -22,4 +22,8 @@ export const heading = style({
 
 export const subHeading = style({
     fontStyle: "italic",
+});
+
+export const content = style({
+    hangingPunctuation: "allow-end",
 });
