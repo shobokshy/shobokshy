@@ -138,12 +138,13 @@ export const config = {
 export default async function handler() {
     try {
         const nowPlaying = await getNowPlaying();
+        const cacheAge = nowPlaying?.isPlaying ? 30 : 300;
+
         return new Response(JSON.stringify(nowPlaying), {
             status: 200,
             headers: {
                 "content-type": "application/json",
-                "cache-control":
-                    "public, s-maxage=60, stale-while-revalidate=600",
+                "cache-control": `public, s-maxage=${cacheAge}, stale-while-revalidate=600`,
             },
         });
     } catch (error) {
