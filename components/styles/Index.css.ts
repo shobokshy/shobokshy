@@ -35,7 +35,7 @@ export const backgroundWrapper = style({
 export const pageWrapper = style({
     vars: {
         //#EEBA64"
-        [vars.colors.primary]: "#FD3F76",
+        [vars.colors.primary]: "#8AE7FF",
     },
     "::selection": {
         background: vars.colors.primary,
